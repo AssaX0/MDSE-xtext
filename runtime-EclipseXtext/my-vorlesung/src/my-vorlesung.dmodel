@@ -1,0 +1,27 @@
+datatype String
+
+package my.vorlesung.vorlesung{
+	
+	import my.vorlesung.person.*
+	
+	entity Vorlesung{
+		title: String
+		many dozent: Dozent
+		many student: Student
+	}
+}
+
+package my.vorlesung.person{
+	
+	entity Person{
+		name: String
+	}
+	
+	entity Dozent extends Person{
+		nummer: String
+	}
+	
+	entity Student extends Person{
+		matNr: String
+	}
+}
